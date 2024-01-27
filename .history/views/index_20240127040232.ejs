@@ -1,0 +1,47 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Product Management System</title>
+        <link rel="stylesheet" href="/styles/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        />
+    </head>
+    <body>
+        <div class="container mt-4">
+            <h1>Product Management System</h1>
+
+            <!-- Add your product listing here -->
+            <!-- views/index.ejs -->
+<!-- ... (Existing code) -->
+
+<div class="container mt-4">
+    <h1>Product Management System</h1>
+  
+    <div class="mb-3">
+      <a class="btn btn-primary" href="/api/products/sort/S10">Sort by ProductStoreCode</a>
+    </div>
+  
+    <ul>
+      <% products.forEach(product => { %>
+        <li>
+          <%= product.ProductCode %> - <%= product.ProductName %> - <%= product.Quantity %> units
+          <!-- Add other product details as needed -->
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+  
+  <!-- ... (Remaining code) -->
+  
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
